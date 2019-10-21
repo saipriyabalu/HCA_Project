@@ -1,6 +1,6 @@
 !function(e,t,n,r){
     function s(){try{var e;if((e="string"==typeof this.response?JSON.parse(this.response):this.response).url){var n=t.getElementsByTagName("script")[0],r=t.createElement("script");r.async=!0,r.src=e.url,n.parentNode.insertBefore(r,n)}}catch(e){}}var o,p,a,i=[],c=[];e[n]={init:function(){o=arguments;var e={then:function(t){return c.push({type:"t",next:t}),e},catch:function(t){return c.push({type:"c",next:t}),e}};return e},on:function(){i.push(arguments)},render:function(){p=arguments},destroy:function(){a=arguments}},e.__onWebMessengerHostReady__=function(t){if(delete e.__onWebMessengerHostReady__,e[n]=t,o)for(var r=t.init.apply(t,o),s=0;s<c.length;s++){var u=c[s];r="t"===u.type?r.then(u.next):r.catch(u.next)}p&&t.render.apply(t,p),a&&t.destroy.apply(t,a);for(s=0;s<i.length;s++)t.on.apply(t,i[s])};var u=new XMLHttpRequest;u.addEventListener("load",s),u.open("GET",r+"/loader.json",!0),u.responseType="json",u.send()
-}(window,document,"Bots", "http://129.213.165.91:3006/bots-client-sdk-js");
+}(window,document,"Bots", "http://150.136.216.174:8080/bots-client-sdk-js");
 
 
 function loadAppId(){
@@ -13,7 +13,7 @@ function loadAppId(){
 function saveAppId(e){
     e.preventDefault();
     //let appId = document.getElementById("appId").value;
-    let appId="5d921f8513d6ab0010a5f2a8";
+    let appId="5da9a2be0d625d001177926c";
     console.log('Validate appId', appId);
     // validate app id
     initBots(appId)
@@ -35,7 +35,7 @@ function loadChat(e){
     e.preventDefault();
     console.log('Init Bots SDK');
     //var appId = window.localStorage.getItem("appId");
-    var appId="5d921f8513d6ab0010a5f2a8";
+    var appId="5da9a2be0d625d001177926c";
     initBots(appId)
         .then(function () {
             console.log("init complete");
@@ -71,18 +71,18 @@ function initBots(appId){
         soundNotificationEnabled: true,
         imageUploadEnabled: true,
         //displayStyle: 'button',
-        buttonIconUrl: 'https://icon-library.net/images/chat-bubble-icon-png/chat-bubble-icon-png-29.jpg',
+        buttonIconUrl: 'https://marketplace.canva.com/MACD19Bt9IQ/1/thumbnail_large/canva-speech-bubble-chat-icon-MACD19Bt9IQ.png',
         buttonWidth: '58px',
         buttonHeight: '58px',
-        businessName: "HCA Healthcare",
-        businessIconUrl: 'http://s3.amazonaws.com/healthcareAnalyticNews/_image/hcalogofinal.png',
+        businessName: "Parallon",
+        businessIconUrl: 'https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/b62f1d20b721e49c785c8a7769abac13',
 
         customColors: {
             //brandColor: '286090',
-            brandColor: 'e05928',
-            brandColor: 'e05928',
-            conversationColor: 'e05928',
-            actionColor: 'e05928',
+            brandColor: '1e345d',
+            brandColor: '1e345d',
+            conversationColor: '1e345d',
+            actionColor: '1e345d',
         },
 
         
@@ -100,10 +100,10 @@ function initBots(appId){
        
 
         customText: {
-            headerText: 'How can I help you today',
+            headerText: 'How do I help you today?',
             inputPlaceholder: 'Type your message...',
             invalidFileError: 'Only images are supported. Choose a file with a supported extension (jpg, jpeg, png, gif, or bmp).',
-            introductionText: 'It\'s you, it\'s me, it\'s all of us',
+            introductionText: 'The Business of Healthcare Transformed.',
             // actionPostbackError: 'An error occurred while processing your action. Please try again.',
             // clickToRetry: 'Message not delivered. Click to retry.',
             // conversationTimestampHeaderFormat: 'MMMM D YYYY, h:mm A',
